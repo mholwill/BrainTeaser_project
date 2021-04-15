@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <h1>.BrainTeaser.</h1>
+
   <div class="menu">
     <button class="nav-button" @click="handleStartFormClick($event)">New Game</button>
     <button class="nav-button" @click="handleTopScoresClick($event)">Top Scores</button>
     <button class="nav-button" @click="handleMuteSoundsClick">{{(muted)?'Enable':'Mute'}} Sounds</button>
   </div>
+
     <component v-bind:is='component' :categories='categories' :questions="questions[index]" :answers="answers[index]" :questionsAsked="questions" :total="total" :topScores="topScores" :muted="muted"/>
   </div>
 </template>
